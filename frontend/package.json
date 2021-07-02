@@ -1,0 +1,63 @@
+{
+  "name": "af_project",
+  "version": "1.0.0",
+  "description": "front end of af_project",
+  "main": "App.js",
+  "scripts": {
+    "start": "parcel src/index.html --open",
+    "test": "jest",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trwelk/af_project_we_35.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trwelk/af_project_we_35/issues"
+  },
+  "homepage": "https://github.com/trwelk/af_project_we_35#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "html-webpack-plugin": "^5.3.1",
+    "parcel-bundler": "^1.12.5",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.58",
+    "@react-pdf-viewer/default-layout": "^2.6.0",
+    "@types/react": "^17.0.11",
+    "assets": "^3.0.1",
+    "axios": "^0.21.1",
+    "babel-jest": "^27.0.6",
+    "chart.js": "^3.3.2",
+    "firebase": "^8.6.8",
+    "jest": "^27.0.6",
+    "jwt-decode": "^3.1.2",
+    "material-table": "^1.69.3",
+    "material-ui": "^0.20.2",
+    "react": "^17.0.2",
+    "react-chartjs-2": "^3.0.3",
+    "react-dom": "^17.0.2",
+    "react-material-ui-carousel": "^2.2.6",
+    "react-parallax": "^3.3.0",
+    "react-pdf": "^5.3.0",
+    "react-redux": "^7.2.4",
+    "react-redux-firebase": "^3.10.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.3",
+    "react-slick": "^0.28.1",
+    "react-slick-carousel": "^0.14.9",
+    "react-test-renderer": "^17.0.2",
+    "reactstrap": "^8.9.0",
+    "redux": "^4.1.0"
+  }
+}
