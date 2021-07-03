@@ -49,7 +49,7 @@ function NewsList(props) {
     },[])
     const classes = useStyles();
     const news = globalState ? globalState.news.news : null
-
+    console.log(news)
 
     const cardUiLiist = news ? (news.map((item, index) => {
         return (<Grid className={classes.newGridItem} item xs={4} key={index}>

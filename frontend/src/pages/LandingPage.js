@@ -12,6 +12,7 @@ import ParagraphWithBackground from '../components/views/util/ParagraphWithBackg
 import HeroWithContent from '../components/views/util/HeroWithContent';
 import NavBar from '../components/views/util/NavBar';
 import Footer from '../components/views/util/Footer';
+import { AppConstants } from '../redux/constants/constants';
 
 const useStyles = makeStyles((theme) => ({
     listContainer: {
@@ -25,9 +26,19 @@ function LandingPage() {
     const [keynote,setKeynote] = useState([])
     const globalState = useSelector((state) => state);
     const classes = useStyles();
+    const [conference,setConference] = useState([])
 
     useEffect(() => {
         fetchWorkshops(dispatch); 
+        axios.get(AppConstants.REST_URL_HOST + '/conference')
+        .then(response => {
+            console.log(response.data[0]    )
+            setConference(response.data[0])
+
+        })
+        .catch(error => {
+            console.log(error)
+        }) 
     }, [])
 
 
@@ -48,12 +59,12 @@ function LandingPage() {
         <div>
             <NavBar/>
         <div style={{background:"#fff5f8",}}>
-            <HeroWithContent/>
-            <Heading1 data={{heading:"BRAINYCONN"}}/>
-            <ParagraphWithBackground text={intro}/>
-            
+            <HeroWithContent heading={conference.name}/>
+            <Heading1 data={{heading:conference.name + conference.year}}/>
+            <ParagraphWithBackground text={conference.description}/>
             <ImageTileDisplay/>
             <KeynoteList/>
+            <Heading1 data={{heading:"News"}}/>
             <NewsList/>
             <Footer/>
         </div>

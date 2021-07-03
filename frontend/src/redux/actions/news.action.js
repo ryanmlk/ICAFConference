@@ -24,6 +24,7 @@ export const fetchNewsSuccess = (data) =>  {
 export const fetchNews = (dispatch) => {
         axios.get(AppConstants.REST_URL_HOST + newsURL)
             .then(response => {
+                console.log(response)
                 dispatch(fetchNewsSuccess(response.data))
 
             })

@@ -78,7 +78,6 @@ const useStyles = makeStyles((theme) => ({
 
 function KeynoteCard(props) {
     const classes = useStyles();
-    console.log(props)
     let {speaker,description,designation} = props
     if(props.data){
     return (

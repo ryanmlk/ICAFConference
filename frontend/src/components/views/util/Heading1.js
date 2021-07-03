@@ -21,7 +21,8 @@ const useStyles = makeStyles({
         fontWeight: 700,
         lineHeight: 1.235,
         textTransform: "uppercase",
-        zIndex:1
+        zIndex:1,
+        textAlign:"center"
 
     },
     headSpan: {

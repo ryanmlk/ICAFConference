@@ -46,11 +46,10 @@ function KeynoteList(props) {
     const dispatch = useDispatch();
     const classes = useStyles();
     const keynoteList = []
-
+    let loading ;
     useEffect(() => {
         axios.get(AppConstants.REST_URL_HOST + "/keynotes")
         .then(response => {
-            console.log(response)
             setState(response.data)
         })
         .catch(error => {

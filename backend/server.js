@@ -28,6 +28,9 @@ app.use(cors(corsOptions));
  app.use(WorkshopRoutes.routes())
  .use(WorkshopRoutes.allowedMethods());
 
+ app.use(keynoteRoutes.routes())
+ .use(keynoteRoutes.allowedMethods());
+
  app.use(conferenceRoutes.routes())
 .use(conferenceRoutes.allowedMethods());
 

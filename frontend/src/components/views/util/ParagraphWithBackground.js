@@ -28,7 +28,8 @@ const useStyles = makeStyles({
         fontWeight: "300",
         lineHeight: 1.334,
         paddingTop:'30px',
-        paddingBottom:'30px'
+        paddingBottom:'30px',
+        textAlign:"center"
 
       }
 });

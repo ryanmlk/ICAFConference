@@ -86,6 +86,9 @@ function NavBar(props) {
 
                     </Typography>
                     <Button color="black">
+                        <Link className={classes.link} to="/">Home</Link>
+                    </Button>
+                    <Button color="black">
                         <Link className={classes.link} to="/news">News</Link>
                     </Button>
                     <Button color="black">

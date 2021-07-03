@@ -8,8 +8,9 @@ const useStyles = makeStyles((theme) => ({
     heroh1: {
         color: 'white',
         textAlign: "center",
-        fontSize: "70px",
-        fontFamily: "system-ui"
+        fontSize: "50px",
+        fontFamily: "system-ui",
+        marginTop:"0px"
     },
     outerContainer: {
         width: "100%",
@@ -33,7 +34,7 @@ function HeroWithContent(props) {
             <div className={classes.outerContainer}>
                 <div className={classes.contentCover}>
                     <h1 className={classes.heroh1}>
-                        BrainCONN
+                        {props.heading}
                     </h1>
                 </div>
             </div>

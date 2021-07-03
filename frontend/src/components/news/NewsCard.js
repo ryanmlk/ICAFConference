@@ -33,6 +33,7 @@ const useStyles = makeStyles({
     bodyH5: {
         textAlign: "left",
         height: "20%",
+        fontSize:"-0.75rem"
 
     },
     textCover:{
@@ -44,7 +45,7 @@ const useStyles = makeStyles({
 export default function NewsCard(props) {
     const classes = useStyles();
     const news = props.news
-
+    console.log(news.image)
     //************************Rendering UI Elements*************************************** */
     
     /*Check if news has been loaded ? Then render the Card component : else render a loading spinner */
@@ -53,7 +54,7 @@ export default function NewsCard(props) {
             <CardActionArea >
                 <CardMedia
                     className={classes.media}
-                    image={require('/assets/bg2.jpg')}
+                    image={news.image}
                     title="Contemplative Reptile"
                 />
                 <CardContent className={classes.bodyCover}>
@@ -64,9 +65,9 @@ export default function NewsCard(props) {
                             </Typography>
                         </div>
                         <div className={classes.textCover}>
-                            <Typography className={classes.bodyH5} gutterBottom variant="h6" component="h2">
+                            <p className={classes.bodyH5} gutterBottom variant="h6" component="h2">
                                 {news.description}
-                            </Typography>
+                            </p>
                         </div>
                         <div className={classes.textCover}>
                             <Typography className={classes.bodyH5} variant="h6" component="p">
