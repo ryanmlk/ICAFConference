@@ -74,7 +74,7 @@ function WorkshopAdminTable(props) {
                             { title: 'Email', field: 'email' },
                             { title: 'Number of Hours', field: 'noOfHours', type: 'numeric' },
                             { title: 'State', field: 'state', lookup: { requested: 'requested', approved: 'approved', declined: 'declined' } },
-                            { title: 'ID', field: 'id' },
+                            { title: 'ID', field: 'id',editable: false },
                         ]}
                         options={{
                             pageSize: 10,
