@@ -16,6 +16,7 @@ import ContactUs from './pages/ContactUs';
 import CallForPapers from './pages/CallForPapers';
 import ConferenceAdmin from './pages/ConferenceAdmin';
 import KeynoteTable from './components/keynote/KeynoteTable';
+import AttendeeRegister from './pages/AttendeeRegister';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           <Route exact path="/researcher/register" component={ResearchRegister} />
           <Route exact path="/workshop/register" component={WorkshopRegister} />
           <Route exact path="/editor/keynote" component={KeynoteTable} />
+          <Route exact path="/attendee/register" component={AttendeeRegister} />
         </Switch>
       </Router>
     </div>

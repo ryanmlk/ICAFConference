@@ -6,7 +6,7 @@ import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import EndUserRegForm from '../components/user/EndUserRegForm';
-import WorkshopPropUpload from '../components/workshopRegistration/WorkshopPropUpload';
+import AttendeePayment from '../components/payment/AttendeePayment';
 import { useDispatch, useSelector } from 'react-redux';
 import { ActionTypes } from '../redux/constants/action-types';
 import NavBar from '../components/views/util/NavBar';
@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function getSteps() {
-  return ['Register Workshop Conductor', 'Upload Workshop Proposal'];
+  return ['Register Attendee', 'Payment Details'];
 }
 
 function getStepContent(step) {
@@ -41,13 +41,13 @@ function getStepContent(step) {
     case 0:
       return <EndUserRegForm/>;
     case 1:
-        return <WorkshopPropUpload/>;
+        return <AttendeePayment/>;
     default:
       return 'Unknown step';
   }
 }
 
-export default function WorkshopRegister() {
+export default function AttendeeRegister() {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
   const steps = getSteps();

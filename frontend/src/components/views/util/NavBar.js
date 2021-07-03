@@ -118,6 +118,9 @@ function NavBar(props) {
                             <MenuItem onClick={handleClose} className={classes.menuItem}>
                                 <Link className={classes.registerLink} to="/workshop/register">Register to conduct workshop</Link>
                             </MenuItem>
+                            <MenuItem onClick={handleClose} className={classes.menuItem}>
+                                <Link className={classes.registerLink} to="/attendee/register">Register as Attendee</Link>
+                            </MenuItem>
                         </Menu>        
                     </div>
                 </Toolbar>

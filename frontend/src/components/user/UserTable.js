@@ -28,7 +28,8 @@ function UserTable() {
         { title: 'Name', field: 'name' },
         { title: 'Email', field: 'email' },
         { title: 'Phone', field: 'contact', type: 'numeric' },
-        { title: 'User Type', field: 'type', lookup: { 'admin': 'Admin','editor': 'Editor', 'reviewer': 'Reviewer'} }
+        { title: 'User Type', field: 'type', lookup: { 'admin': 'Admin','editor': 'Editor', 'reviewer': 'Reviewer'} },
+        { title: 'Password', field: 'password' }
     ]);
 
     const data = globalState.superuser.superUsers;
