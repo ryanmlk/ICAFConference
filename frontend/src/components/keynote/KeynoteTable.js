@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import MaterialTable, { MTableToolbar } from 'material-table'
 import { useDispatch, useSelector } from 'react-redux'
-
+import AdminNavbar from '../views/AdminNavBar';
 
 import { makeStyles } from '@material-ui/core/styles';
 import CircularProgress from '@material-ui/core/CircularProgress';
@@ -60,7 +60,9 @@ const keynotes = globalState.keynote.keynote
       
       if(keynotes){
     return (
-      <div style={{padding: "20px"}}>
+      <div>
+        <AdminNavbar/>
+        <div style={{padding: "20px", marginTop: "100px"}}>
 
         <MaterialTable style={{padding:"0px",boxShadow: "0 0 2px 2px black"}}
         title={"Keynotes"}
@@ -117,6 +119,7 @@ const keynotes = globalState.keynote.keynote
           }}
 
         />
+      </div>
       </div>
     )
   }
