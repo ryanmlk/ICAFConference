@@ -6,6 +6,15 @@ import AdminNavbar from '../components/views/AdminNavBar';
 import Heading1 from '../components/views/util/Heading1';
 
 const useStyles = makeStyles((theme) => ({
+    root: {
+        display: "flex",
+        flexDirection: "column",
+        fontFamily: "Roboto",
+        backgroundImage: "url(https://wallpaperaccess.com/full/446984.jpg)",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        height: "100vh"
+    },
     chartCover:{
         width:"45%"
     },
@@ -21,7 +30,7 @@ function Dashboard() {
     const classes = useStyles();
 
     return (
-        <div>
+        <div className={classes.root}>
             <AdminNavbar/>
         <div style={{ padding: "20px",marginTop:"10px" }}>
         <div className={classes.chartContainer}>

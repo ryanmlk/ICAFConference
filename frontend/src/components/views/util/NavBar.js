@@ -42,7 +42,7 @@ const useStyles = makeStyles({
         },
     },
     menu: {
-        backgroundColor: "#000"
+        marginTop: "40px"
     }
 });
 
@@ -110,6 +110,7 @@ function NavBar(props) {
                             keepMounted
                             open={Boolean(anchorEl)}
                             onClose={handleClose}
+                            className={classes.menu}
                         >
                             <MenuItem onClick={handleClose} className={classes.menuItem}>
                                 <Link className={classes.registerLink} to="/researcher/register">Register as Researcher</Link>

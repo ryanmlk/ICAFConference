@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import MaterialTable, { MTableToolbar } from 'material-table'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchResearch } from '../../redux/actions/research.action';
+import { makeStyles } from '@material-ui/core/styles';
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 import CircularProgress from '@material-ui/core/CircularProgress';
@@ -21,6 +22,16 @@ function ResearchPaperTable(props) {
     useEffect(() => {
         fetchResearch(dispatch);
     }, [])
+
+    const useStyles = makeStyles((theme) => ({
+        root: {
+          fontFamily: "Roboto",
+          backgroundImage: "url(https://wallpaperaccess.com/full/446984.jpg)",
+          backgroundSize: "cover",
+          backgroundRepeat: "repeat",
+          backgroundAttachment: "fixed"
+        },
+    }));
     //*********************************************CONSTANTS************************************************************* */
     const globalState = useSelector((state) => state);
     const dispatch = useDispatch();
@@ -33,6 +44,7 @@ function ResearchPaperTable(props) {
     });
     const { vertical, horizontal, open } = state;
     const { useState } = React;
+    const classes = useStyles();
     const stateLookup = {
         requested: AppConstants.STATE_REQUESTED,
         approved: AppConstants.STATE_APPROVED,
@@ -167,7 +179,7 @@ function ResearchPaperTable(props) {
     return (
         <div>
         <AdminNavbar/>
-        <div style={{ padding: "20px",marginTop:"100px" }}>
+        <div style={{ padding: "50px",marginTop:"70px" }} className={classes.root}>
             {table}
             {feedBackToast}
         </div>

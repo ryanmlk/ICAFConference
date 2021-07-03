@@ -12,6 +12,13 @@ import { AppConstants } from '../redux/constants/constants';
 
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    fontFamily: "Roboto",
+    backgroundImage: "url(https://wallpaperaccess.com/full/446984.jpg)",
+    backgroundSize: "cover",
+    backgroundRepeat: "repeat",
+    backgroundAttachment: "fixed"
+  },
   timeDivCover: {
     width: "10%",
     background: "#1798ff2b"
@@ -107,9 +114,9 @@ function WorkshopManagement() {
     )
   })
   return (
-    <div>
+    <div className={classes.root}>
       <AdminNavbar/>
-      <div style={{ padding: "20px",marginTop:"100px" }}>
+      <div style={{ padding: "20px",marginTop:"50px" }}>
       <Heading1 data={{ heading: "Workshop Details" }} />
       <Paper className={classes.paperCoverWorkshop} elevation={3}>
         <div style={{ display: "flex" }}>

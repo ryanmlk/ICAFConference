@@ -10,10 +10,11 @@ import AdminNavbar from '../views/AdminNavBar';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: '2px 4px',
-    display: 'flex',
-    alignItems: 'center',
-    width: 400,
+    fontFamily: "Roboto",
+    backgroundImage: "url(https://wallpaperaccess.com/full/446984.jpg)",
+    backgroundSize: "cover",
+    backgroundRepeat: "repeat",
+    backgroundAttachment: "fixed"
   },
   input: {
     marginLeft: theme.spacing(1),
@@ -59,7 +60,7 @@ function NewsTable(props) {
 
   if (news) {
     return (
-      <div>
+      <div className={classes.root}>
         <AdminNavbar />
         <div style={{ padding: "20px", marginTop: "100px" }}>
 

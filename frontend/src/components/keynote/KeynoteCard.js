@@ -21,8 +21,8 @@ const useStyles = makeStyles((theme) => ({
         display:'flex',
         flexDirection:'column',
         alignItems:'center',
-        background:"#fff5f8"
-
+        background: "rgba(255,255,255,0.7)",
+        borderRadius: "15px"
     },
     keyHead: {
         height: "40%",

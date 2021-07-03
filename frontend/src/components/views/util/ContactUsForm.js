@@ -15,7 +15,10 @@ import Paper, { Button } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
     formCover: {
         width: "50%",
-        margin: 'auto'
+        margin: 'auto',
+        background: "rgba(255, 255, 255, 0.6)",
+        borderRadius: "15px",
+        padding: "20px"
     },
 
     field: {

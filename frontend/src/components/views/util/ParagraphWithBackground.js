@@ -9,7 +9,7 @@ const useStyles = makeStyles({
     root: {
         display: 'flex',
         overflow: 'hidden',
-        backgroundColor: "#fff5f8",
+        backgroundColor: "rgba(255,245,248,0.5)",
       },
       container: {
         marginTop: "20px",
@@ -21,6 +21,7 @@ const useStyles = makeStyles({
         pointerEvents: 'none',
         position: 'absolute',
         top: -180,
+        opacity: 0.7
       },
       paraH3:{
         fontSize: "20px",

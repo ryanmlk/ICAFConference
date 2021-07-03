@@ -15,6 +15,12 @@ import Footer from '../components/views/util/Footer';
 import { AppConstants } from '../redux/constants/constants';
 
 const useStyles = makeStyles((theme) => ({
+    root: {
+        fontFamily: "Roboto",
+        backgroundImage: "url(https://wallpaper.dog/large/10733975.jpg)",
+        backgroundRepeat: "repeat",
+        backgroundAttachment: "fixed"
+    },
     listContainer: {
         display: "flex",
         flexDirection: "column"
@@ -58,12 +64,12 @@ function LandingPage() {
     return (
         <div>
             <NavBar/>
-        <div style={{background:"#fff5f8",}}>
+        <div className={classes.root}>
             <HeroWithContent heading={conference.name}/>
-            <Heading1 data={{heading:conference.name + conference.year}}/>
+            <Heading1 data={{heading:conference.name + " - " + conference.year}}/>
             <ParagraphWithBackground text={conference.description}/>
-            <ImageTileDisplay/>
             <KeynoteList/>
+            <ImageTileDisplay/>
             <Heading1 data={{heading:"News"}}/>
             <NewsList/>
             <Footer/>

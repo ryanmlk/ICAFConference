@@ -29,26 +29,12 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       zIndex: 1,
     },
-    '&:hover $imageBackdrop': {
-      opacity: 0.15,
-    },
     '&:hover $imageMarked': {
       opacity: 0,
     },
     '&:hover $imageTitle': {
       border: '4px solid currentColor',
     },
-  },
-  imageButton: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    color: theme.palette.common.white,
   },
   imageSrc: {
     position: 'absolute',
@@ -58,16 +44,6 @@ const useStyles = makeStyles((theme) => ({
     bottom: 0,
     backgroundSize: 'cover',
     backgroundPosition: 'center 40%',
-  },
-  imageBackdrop: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0,
-    background: theme.palette.common.black,
-    opacity: 0.5,
-    transition: theme.transitions.create('opacity'),
   },
   imageTitle: {
     position: 'relative',
@@ -82,6 +58,14 @@ const useStyles = makeStyles((theme) => ({
     left: 'calc(50% - 9px)',
     transition: theme.transitions.create('opacity'),
   },
+  headSpan: {
+    width: "55px",
+    height: "4px",
+    margin: "8px auto 0",
+    display: "block",
+    backgroundColor: " #ff3366",
+    zIndex:1
+  }
 }));
 
 function ImageTileDisplay(props) {
@@ -90,56 +74,47 @@ function ImageTileDisplay(props) {
   const images = [
     {
       url:
-        'https://images.unsplash.com/photo-1534081333815-ae5019106622?auto=format&fit=crop&w=400&q=80',
-      title: 'JAVA',
+        'https://static.sliit.lk/wp-content/uploads/2019/12/10111842/The-2019-International-Conference-on-Advancements-in-Computing-ICAC-2019-concluded-successfully-7.jpg',
       width: '40%',
     },
     {
       url:
-        'https://images.unsplash.com/photo-1531299204812-e6d44d9a185c',
-      title: 'ML',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREFe2aFdhz-37fUh8bUAmoMtFyrb6kAkOypg&usqp=CAU',
       width: '20%',
     },
     {
       url:
-        'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=400&q=80',
-      title: 'CCR',
+        'https://static.sliit.lk/wp-content/uploads/2020/03/12024221/The-preliminary-rounds-of-SLIIT-Softskills-2020-was-successfully-held-at-Baddulla-5.jpg',
       width: '40%',
     },
     {
       url:
-        'https://images.unsplash.com/photo-1453747063559-36695c8771bd?auto=format&fit=crop&w=400&q=80',
-      title: 'JS',
+        'https://static.sliit.lk/wp-content/uploads/2018/11/05120551/2.jpg',
       width: '38%',
     },
     {
       url:
-        'https://images.unsplash.com/photo-1523309996740-d5315f9cc28b?auto=format&fit=crop&w=400&q=80',
-      title: 'PYTHON',
+        'https://www.sliit.lk/wp-content/uploads/2017/11/SLIIT-August-Convocation-2016-05.jpg',
       width: '38%',
     },
     {
       url:
-        'https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?auto=format&fit=crop&w=400&q=80',
-      title: 'QA',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkBhhbKkp0DH1Hy2NFf4WSwty2zOeI8lredA&usqp=CAU',
       width: '24%',
     },
     {
       url:
-        'https://images.unsplash.com/photo-1506941433945-99a2aa4bd50a?auto=format&fit=crop&w=400&q=80',
-      title: 'DS',
+        'https://static.sliit.lk/wp-content/uploads/2018/11/16061114/DSC0885.jpg',
       width: '40%',
     },
     {
       url:
-        'https://images.unsplash.com/photo-1533727937480-da3a97967e95?auto=format&fit=crop&w=400&q=80',
-      title: 'DBMS',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSffKlqnmihknrBmODjZ0SVp1tIN82l-uGDAg&usqp=CAU',
       width: '20%',
     },
     {
       url:
-        'https://images.unsplash.com/photo-1518136247453-74e7b5265980?auto=format&fit=crop&w=400&q=80',
-      title: 'MONGO',
+        'https://site.ieee.org/r10-htc-2018/files/2018/07/sliit.jpg',
       width: '40%',
     },
   ];
@@ -147,8 +122,9 @@ function ImageTileDisplay(props) {
   return (
     <Container className={classes.root} component="section">
       <Typography variant="h4" marked="center" align="center" component="h2">
-        TECH AND TECHIES
+        Past Conferences
       </Typography>
+      <span className={classes.headSpan} />
       <div className={classes.images}>
         {images.map((image) => (
           <ButtonBase
@@ -164,18 +140,6 @@ function ImageTileDisplay(props) {
                 backgroundImage: `url(${image.url})`,
               }}
             />
-            <div className={classes.imageBackdrop} />
-            <div className={classes.imageButton}>
-              <Typography
-                component="h3"
-                variant="h6"
-                color="inherit"
-                className={classes.imageTitle}
-              >
-                {image.title}
-                <div className={classes.imageMarked} />
-              </Typography>
-            </div>
           </ButtonBase>
         ))}
       </div>

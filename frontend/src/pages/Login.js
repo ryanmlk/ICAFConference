@@ -9,12 +9,22 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
+    root: {
+        display: "flex",
+        flexDirection: "column",
+        fontFamily: "Roboto",
+        backgroundImage: "url(https://wallpaperaccess.com/full/446984.jpg)",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        height: "100vh"
+    },
     paperStyle: {
         padding: 20, 
         height:'50vh', 
         width:280, 
-        margin:"20px auto",
-        backgroundColor: '#6c7a89'
+        margin:"100px auto",
+        background: 'rgba(108,122,137,0.6)',
+        borderRadius: "15px"
     },
     iconStyle: {
         backgroundColor: '#FFF',
@@ -85,7 +95,7 @@ function Login() {
       };
 
     return(
-        <div>
+        <div className={classes.root}>
             <Grid>
                 <Paper elevation={10} className={classes.paperStyle}>
                     <Grid align='center'>

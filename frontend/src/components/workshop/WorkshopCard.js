@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
         width: "90%",
         display: "flex",
         flexDirection: "row",
-        background:"#fff5f8",
+        background:"rgba(255,245,248,0.5)",
         justifyContent:'center',
 
     },
@@ -19,7 +19,9 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "center",
         display: "flex",
         paddingTop: "20px",
-        background:"#fff5f8"
+        background:"rgba(255,255,255,0.5)",
+        borderRadius: "15px",
+        marginTop: "10px"
     },
     imgContainer: {
         width: "25%",

@@ -1,20 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
-import { withStyles } from '@material-ui/core/styles';
-import WorkshopCard from './components/workshop/WorkshopCard';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Users from './pages/Users';
 import Login from './pages/Login';
 import ResearchRegister from './pages/ResearchRegister';
 import WorkshopRegister from './pages/WorkshopRegister';
 import WorkshopManagement from './pages/WorkshopManagement';
 import LandingPage from './pages/LandingPage';
-import Header from './components/views/Header/Header';
 import News from './pages/News';
 import Workshops from './pages/Workshops';
 import ResearchPaperTable from './components/researchPaper/ResearchPaperTable';
-import WorkshopOverview from './components/dashboard/WorkshopOverview';
-import Chart from './components/dashboard/Chart';
 import Dashboard from './pages/Dashboard';
 import WorkshopAdminTable from './components/workshop/WorkshopAdminTable';
 import NewsTable from './components/news/NewsTable';
@@ -33,7 +27,6 @@ function App() {
           <Route exact path="/workshops" component={Workshops} />
           <Route exact path="/contactUs" component={ContactUs} />
           <Route exact path="/papers" component={CallForPapers} />
-
           <Route exact path="/users" component={Users} />
           <Route exact path="/editor/workshops" component={WorkshopManagement} />
           <Route exact path="/editor/research" component={ResearchPaperTable} />

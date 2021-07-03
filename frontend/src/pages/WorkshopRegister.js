@@ -9,17 +9,16 @@ import EndUserRegForm from '../components/user/EndUserRegForm';
 import WorkshopPropUpload from '../components/workshopRegistration/WorkshopPropUpload';
 import { useDispatch, useSelector } from 'react-redux';
 import { ActionTypes } from '../redux/constants/action-types';
+import NavBar from '../components/views/util/NavBar';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '100%',
-    display: "flex",
-    flexDirection: "column",
     fontFamily: "Roboto",
-    backgroundImage: "url(https://cdn.wallpapersafari.com/49/20/acu0rZ.jpg)",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    height: "100vh"
+    backgroundImage: "url(https://wallpaper.dog/large/10733975.jpg)",
+    backgroundRepeat: "repeat",
+    backgroundAttachment: "fixed",
+    padding: "20px",
+    marginTop: "65px"
   },
   button: {
     marginRight: theme.spacing(1),
@@ -28,6 +27,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(1),
     marginBottom: theme.spacing(1),
   },
+  stepper: {
+    background: "rgba(255,255,255,0.0)"
+  }
 }));
 
 function getSteps() {
@@ -65,20 +67,23 @@ export default function WorkshopRegister() {
   };
 
   return (
-    <div className={classes.root}>
-      <Stepper activeStep={activeStep}>
-        {steps.map((label, index) => {
-          const stepProps = {};
-          const labelProps = {};
-          return (
-            <Step key={label} {...stepProps}>
-              <StepLabel {...labelProps}>{label}</StepLabel>
-            </Step>
-          );
-        })}
-      </Stepper>
-      <div>
-        {getStepContent(activeStep)}
+    <div>
+      <NavBar/>
+      <div className={classes.root}>
+        <Stepper activeStep={activeStep} className={classes.stepper}>
+          {steps.map((label, index) => {
+            const stepProps = {};
+            const labelProps = {};
+            return (
+              <Step key={label} {...stepProps}>
+                <StepLabel {...labelProps}>{label}</StepLabel>
+              </Step>
+            );
+          })}
+        </Stepper>
+        <div>
+          {getStepContent(activeStep)}
+        </div>
       </div>
     </div>
   );

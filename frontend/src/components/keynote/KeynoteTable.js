@@ -9,10 +9,12 @@ import {updatKeynote,creatKeynote,deletKeynote,fetchKeynote} from '../../redux/a
 
 const useStyles = makeStyles((theme) => ({
     root: {
-      padding: '2px 4px',
-      display: 'flex',
-      alignItems: 'center',
-      width: 400,
+      display: "flex",
+      flexDirection: "column",
+      fontFamily: "Roboto",
+      backgroundImage: "url(https://wallpaperaccess.com/full/446984.jpg)",
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat"
     },
     input: {
       marginLeft: theme.spacing(1),
@@ -60,7 +62,7 @@ const keynotes = globalState.keynote.keynote
       
       if(keynotes){
     return (
-      <div>
+      <div className={classes.root}>
         <AdminNavbar/>
         <div style={{padding: "20px", marginTop: "100px"}}>
 

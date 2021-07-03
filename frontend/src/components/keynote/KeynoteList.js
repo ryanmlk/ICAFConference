@@ -20,19 +20,19 @@ const useStyles = makeStyles((theme) => ({
     marginTop:"10px"
   },
   paperCover:{
-      background:"grey",
-      height:"600px",
-      width:"30%"
+    background:"grey",
+    height:"600px",
+    width:"30%"
   },
   hrClass:{
-      width:"50px",
-      margin:"auto",
+    width:"50px",
+    margin:"auto",
     display: "block",
-     height: "1px",
+    height: "5px",
     border: "0",
-    borderTop: "5px solid grey",
-     padding: 0 ,
-     marginTop:"5px"
+    background: "#FF3366",
+    padding: 0 ,
+    marginTop:"5px"
 
   },
   keyNoteHomeHead:{

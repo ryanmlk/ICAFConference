@@ -13,18 +13,18 @@ import { useHistory } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
     paperStyle: {
         padding: 20, 
-        height:'50vh', 
+        height:'70vh', 
         width:'80%', 
         margin:"20px auto",
-        backgroundColor: '#ff3366',
-        opacity: 0.8
+        backgroundColor: 'rgba(255,245,248,0.7)',
+        borderRadius: "15px"
     },
     iconStyle: {
         backgroundColor: '#FFF',
         color: '#ff3366'
     },
     textStyle: {
-        color: '#FFF'
+        color: '#333'
     },
     fieldStyle: {
         margin:"10px auto",

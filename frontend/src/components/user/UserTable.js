@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     tableContainer: {
         width: "84%",
         margin: "auto",
-        marginTop: "33px",
+        marginBottom: "20vh"
     }
 }));
 

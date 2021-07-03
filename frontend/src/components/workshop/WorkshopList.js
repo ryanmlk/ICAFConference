@@ -23,7 +23,7 @@ function WorkshopList() {
     //*********************************************Rendering elements************************************************************* */
 
     return (
-        <div style={{ display: "flex", flexDirection: 'column' }}>
+        <div style={{ display: "flex", flexDirection: 'column'}}>
             {workShopUiList}
         </div>
     );

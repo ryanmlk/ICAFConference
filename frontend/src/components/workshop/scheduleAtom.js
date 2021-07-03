@@ -93,10 +93,10 @@ export default function scheduleAtom(props) {
                 {props.timeSlot}
             </Paper>
             <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-                <DialogTitle id="form-dialog-title">Products</DialogTitle>
+                <DialogTitle id="form-dialog-title">Workshop Scheduling</DialogTitle>
                 <DialogContent className={classes.dialog}>
                     <DialogContentText>
-                        Add Product Details
+                        Add workshop details
           </DialogContentText>
                     <TextField
                         autoFocus
@@ -125,7 +125,7 @@ export default function scheduleAtom(props) {
                         name="workshop"
                         value={state.workshop ? state.workshop.title : ""}
                         onChange={handleChange}
-                        helperText="Please select your currency"
+                        helperText="Select Workshop"
                         variant="outlined"
                     >
                         {workshops.map((workshop) => (

@@ -28,8 +28,8 @@ const useStyles = makeStyles({
     link:{
         textDecoration:'none',
         color: "white",
-    fontSize: "larger",
-    fontWeight: "300",
+        fontSize: "12px",
+        fontWeight: "300",
     }
 });
 
@@ -73,10 +73,10 @@ function AdminNavbar(props) {
                     <Typography variant="h6" className={classes.title} >
                     </Typography>
                     <Button color="black">
-                        <Link className={classes.link} to="/editor/workshopAdmin">Workshop Managemnt</Link>
+                        <Link className={classes.link} to="/editor/workshopAdmin">Workshop Management</Link>
                     </Button>
                     <Button color="black">
-                        <Link className={classes.link} to="/editor/research">Research Managemnt</Link>
+                        <Link className={classes.link} to="/editor/research">Research Management</Link>
                     </Button>
                     <Button color="black">
                         <Link className={classes.link} to="/editor/workshops">Workshop Schedule</Link>
@@ -85,7 +85,7 @@ function AdminNavbar(props) {
                         <Link className={classes.link} to="/editor/dashboard">Dashboard</Link>
                     </Button>
                     <Button color="black">
-                        <Link className={classes.link} to="/users">User management</Link>
+                        <Link className={classes.link} to="/users">User Management</Link>
                     </Button>
                     <Button color="black">
                         <Link className={classes.link} to="/editor/conference">Conference </Link>
@@ -97,7 +97,7 @@ function AdminNavbar(props) {
                         <Link className={classes.link} to="/editor/keynote">Keynotes</Link>
                     </Button>
                     <Button color="black" onClick={handleLogout}>
-                        <Link className={classes.link} to="/editor/keynote">logout</Link>
+                        <Link className={classes.link} to="/editor/keynote">Logout</Link>
                     </Button>
                 </Toolbar>
             </AppBar>

@@ -12,7 +12,10 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 const useStyles = makeStyles((theme) => ({
     formCover: {
         width: "50%",
-        margin: 'auto'
+        margin: 'auto',
+        background: "rgba(255, 255, 255, 0.8)",
+        borderRadius: "15px",
+        padding: "20px"
     },
 
     field: {
