@@ -3,7 +3,7 @@ import {ActionTypes} from  '../constants/action-types'
 import {AppConstants} from '../constants/constants'
 import {useDispatch, useSelector} from 'react-redux'
 import { UsbOutlined } from '@material-ui/icons'
-const keynoteURL = "/KEYNOTE";
+const keynoteURL = "/keynotes";
 
 
 export const fetchKeynotesLoading = (data) =>  {

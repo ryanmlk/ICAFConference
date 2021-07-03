@@ -56,7 +56,7 @@ function AttendeePayment () {
     return(
         <Grid>
             <Paper elevation={10} className={classes.paperStyle}>
-                <h2 className={classes.textStyle}><AssignmentIcon fontSize="large"/> Research Paper Upload</h2>
+                <h2 className={classes.textStyle}><AssignmentIcon fontSize="large"/> Payment Details</h2>
                 <TextField name="cardNo" label="Card Number" onChange={handleChange} fullWidth required className={classes.fieldStyle}/>
                 <h4 className={classes.textStyle}>Expiry</h4>
                 <TextField name="expMon" label="Month" onChange={handleChange} required className={classes.fieldStyle}/>
