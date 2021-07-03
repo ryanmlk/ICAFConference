@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function getSteps() {
-  return ['Register Researcher', 'Upload Research Paper'];
+  return ['Register Researcher', 'Upload Workshop Proposal'];
 }
 
 function getStepContent(step) {
